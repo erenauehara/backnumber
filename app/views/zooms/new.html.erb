@@ -1,0 +1,25 @@
+<body class="yozora">
+<div class="ccc">
+<h1>backnumber</h1>
+<h3>新規投稿ページ</h3>
+<%= form_for @zoom do |f| %>
+
+  <div class="field">
+    <%= f.label :タイトル%><br>
+    <%= f.text_field :title, :size => 30 %>
+  </div>
+  <%= f.select :category, [["失恋", "situren"], ["男性", "men"], ["女性", "women"]], include_blank: "どの投稿？" %>
+  <div class="field">
+    <%= f.label :詳細  %><br>
+    <%= f.text_area :about, :size => "30x2" %>
+  </div>
+  <%= f.label :youtube_url %><br>
+    <%= f.text_field :youtube_url, :size => 140 %>
+
+
+  <%= f.submit "投稿する" %>
+<% end %>
+
+<%= link_to "一覧に戻る", zooms_path %>
+</div>
+</body>

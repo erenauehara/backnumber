@@ -1,0 +1,15 @@
+<body class="yozora">
+<h1>backnumber</h1>
+<h3>backnumber詳細</h3>
+<div class="zoom">
+<div class="douga">
+<iframe width="1000" height="600" src="https://www.youtube.com/embed/<%= find_youtube_url(@zoom.youtube_url) %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+  <p><%= @zoom.title %></p>
+  <p><%= @zoom.about %></p>
+
+  <%= link_to "編集する", edit_zoom_path(@zoom.id) %>
+</div>
+
+<%= link_to "zoom一覧に戻る", zooms_path %>
+</body>

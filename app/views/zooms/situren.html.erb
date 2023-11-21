@@ -1,0 +1,19 @@
+<body class=yozora>
+<h1>失恋</h1>
+<div class=yyy>
+<% @zooms.each do |t| %>
+  <% if t.category == "situren" %>  
+  <div class="tweet">
+  <%= t.title %>
+  <br>
+  <%= t.about %>
+  <br>
+  <%= link_to "詳細へ", zoom_path(t.id) %>
+  <br>
+  <%= link_to "編集する", edit_zoom_path(t.id) %>
+  <%= button_to "削除する", zoom_path(t.id), method: :delete %>
+  </div>
+  <% end %>
+<% end %>
+</div>
+</body>
